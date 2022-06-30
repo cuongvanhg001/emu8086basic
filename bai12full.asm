@@ -73,9 +73,9 @@ baib proc
     input_str:
         mov ah,1
         int 21h
-        cmp al,0dh
+        cmp al,0dh; nhan enter de ket thuc nhap ten file
         jz b1
-        cmp al,1bh
+        cmp al,1bh ;nhan esc de ket thuc nhap noi dung
         jz b2
         mov [si],al
         inc si
